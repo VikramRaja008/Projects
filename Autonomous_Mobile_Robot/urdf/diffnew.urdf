@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="diffnew">
+
+
+
+
+<link name="base_footprint">
+    
+    <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+            <box size="0.001 0.001 0.001" />
+        </geometry>
+    </visual>
+  </link>
+
+  <gazebo reference="base_footprint">
+    <turnGravityOff>false</turnGravityOff>
+  </gazebo>
+
+
+<joint name="base_footprint_joint" type="fixed">
+    <parent link="base_footprint" />
+    <child link="base_link" />
+    <origin xyz="0 0 0.15" rpy="0 0 0"/>
+</joint> 
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.00879841884139122 -6.93889390390723E-18 -0.0380169553485048"
+        rpy="0 0 0" />
+      <mass
+        value="6.22897568186811" />
+      <inertia
+        ixx="0.0432236214926434"
+        ixy="4.36241173091621E-19"
+        ixz="0.000394280221221755"
+        iyy="0.055773724813229"
+        iyz="-1.29034434134919E-18"
+        izz="0.0930196193093457" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diffnew/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diffnew/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="llink">
+    <inertial>
+      <origin
+        xyz="0 0.3729447071577 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.54415330003288" />
+      <inertia
+        ixx="0.00102536171760454"
+        ixy="-1.54004319248739E-20"
+        ixz="-1.79063206212553E-19"
+        iyy="0.00198506327041014"
+        iyz="-4.51968754128526E-21"
+        izz="0.00102536171760454" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diffnew/meshes/llink.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diffnew/meshes/llink.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ljoint"
+    type="continuous">
+    <origin
+      xyz="0.010856 -0.19238 -0.0375"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="llink" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="2"
+      velocity="2" />
+  </joint>
+  <link
+    name="rLink">
+    <inertial>
+      <origin
+        xyz="-2.77555756156289E-17 -0.3729447071577 -1.38777878078145E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.54415330003288" />
+      <inertia
+        ixx="0.00102536171760454"
+        ixy="5.07523747284399E-21"
+        ixz="3.915409798683E-20"
+        iyy="0.00198506327041014"
+        iyz="-1.65335210293271E-21"
+        izz="0.00102536171760454" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diffnew/meshes/rLink.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diffnew/meshes/rLink.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rjoint"
+    type="continuous">
+    <origin
+      xyz="0.010856 0.19238 -0.0375"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rLink" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="2"
+      velocity="2" />
+  </joint>
+  <link
+    name="cf">
+    <inertial>
+      <origin
+        xyz="0 0 0.0201548913043478"
+        rpy="0 0 0" />
+      <mass
+        value="0.0679758019805057" />
+      <inertia
+        ixx="2.10405280418607E-05"
+        ixy="5.57074714922485E-38"
+        ixz="-7.70871753002981E-22"
+        iyy="2.10405280418607E-05"
+        iyz="-3.74878111422761E-38"
+        izz="1.44401476411007E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diffnew/meshes/cf.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diffnew/meshes/cf.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cj"
+    type="fixed">
+    <origin
+      xyz="0.12335574825357 0 -0.114375"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="cf" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="cr">
+    <inertial>
+      <origin
+        xyz="-2.77555756156289E-17 0 0.0201548913043478"
+        rpy="0 0 0" />
+      <mass
+        value="0.0679758019805057" />
+      <inertia
+        ixx="2.10405280418607E-05"
+        ixy="5.57074714922485E-38"
+        ixz="-7.70871753002981E-22"
+        iyy="2.10405280418607E-05"
+        iyz="-3.74878111422761E-38"
+        izz="1.44401476411007E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diffnew/meshes/cr.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diffnew/meshes/cr.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cjr"
+    type="fixed">
+    <origin
+      xyz="-0.10164 0 -0.11438"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="cr" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="sl">
+    <inertial>
+      <origin
+        xyz="0 0 -0.0792595816790171"
+        rpy="0 0 0" />
+      <mass
+        value="0.919352182048826" />
+      <inertia
+        ixx="0.00176847625889016"
+        ixy="1.21528249056164E-35"
+        ixz="3.97848081315071E-20"
+        iyy="0.00163494942556762"
+        iyz="-6.68831388418196E-20"
+        izz="0.00118292858115917" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diffnew/meshes/sl.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diffnew/meshes/sl.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="sj"
+    type="fixed">
+    <origin
+      xyz="0.11516 0 0.121"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="sl" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+
+ <gazebo reference="base_link">
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+
+  <gazebo reference="llink">
+    <mu1>0.1</mu1>
+    <mu2>0.1</mu2>
+    <kp>500000.0</kp>
+    <kd>10.0</kd>
+    <minDepth>0.005</minDepth>
+    <maxVel>1.0</maxVel>
+    <fdir1>1 0 0</fdir1>
+    <material>Gazebo/FlatBlack</material>
+<gravity>true</gravity>
+  </gazebo>
+
+  <gazebo reference="rLink">
+    <mu1>0.1</mu1>
+    <mu2>0.1</mu2>
+    <kp>500000.0</kp>
+    <kd>10.0</kd>
+    <minDepth>0.005</minDepth>
+    <maxVel>1.0</maxVel>
+    <fdir1>1 0 0</fdir1>
+    <material>Gazebo/FlatBlack</material>
+<gravity>true</gravity>
+  </gazebo>
+
+  <gazebo reference="cf">
+    <mu1>0.1</mu1>
+    <mu2>0.1</mu2>
+    <kp>1000000.0</kp>
+    <kd>100.0</kd>
+    <minDepth>0.005</minDepth>
+    <maxVel>1.0</maxVel>
+    <material>Gazebo/FlatBlack</material>
+<gravity>true</gravity>
+  </gazebo>
+
+  <gazebo reference="cr">
+    <mu1>0.1</mu1>
+    <mu2>0.1</mu2>
+    <kp>1000000.0</kp>
+    <kd>100.0</kd>
+    <minDepth>0.005</minDepth>
+    <maxVel>1.0</maxVel>
+    <material>Gazebo/FlatBlack</material>
+<gravity>true</gravity>
+  </gazebo>
+
+
+<!--wheel plugins and sensor plugins-->
+
+<gazebo reference="sl">
+    <material>Gazebo/Blue</material>
+    <turnGravityOff>false</turnGravityOff>
+    <sensor type="ray" name="head_hokuyo_sensor">
+      <pose>4 0 0 0 0 0</pose>
+      <visualize>true</visualize>
+      <update_rate>40</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>720</samples>
+            <resolution>1</resolution>
+            <min_angle>-1.570796</min_angle>
+            <max_angle>1.570796</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.10</min>
+          <max>10.0</max>
+          <resolution>0.001</resolution>
+        </range>
+      </ray>
+      <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_laser.so">
+        <topicName>/scan</topicName>
+        <frameName>sl</frameName>
+      </plugin>
+    </sensor>
+</gazebo>
+
+
+<!-- Differential drive controller  -->
+<gazebo>
+    <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+
+       <rosDebugLevel>Debug</rosDebugLevel>
+      <publishWheelTF>false</publishWheelTF>
+      <robotNamespace>/</robotNamespace>
+      <publishTf>1</publishTf>
+      <publishWheelJointState>false</publishWheelJointState>
+      <alwaysOn>true</alwaysOn>
+      <updateRate>30</updateRate>
+      <leftJoint>ljoint</leftJoint>
+      <rightJoint>rjoint</rightJoint>
+      <wheelSeparation>0.35</wheelSeparation>
+      <wheelDiameter>0.15</wheelDiameter>
+      <broadcastTF>1</broadcastTF>
+      <wheelTorque>100</wheelTorque>
+      <wheelAcceleration>10</wheelAcceleration>
+      <commandTopic>cmd_vel</commandTopic>
+      <odometryFrame>odom</odometryFrame> 
+      <odometryTopic>odom</odometryTopic> 
+      <odometrySource>1</odometrySource>
+      <publishOdomTF>true</publishOdomTF>
+      <robotBaseFrame>base_footprint</robotBaseFrame>
+      
+    </plugin>
+</gazebo> 
+
+</robot>

@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Robot1">
+
+
+ <link name="base_footprint">
+    
+    <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+            <box size="0.001 0.001 0.001" />
+        </geometry>
+    </visual>
+  </link>
+
+  <gazebo reference="base_footprint">
+    <turnGravityOff>false</turnGravityOff>
+  </gazebo>
+
+
+<joint name="base_footprint_joint" type="fixed">
+    <parent link="base_footprint" />
+    <child link="base_link" />
+    <origin xyz="0 0 0.12" rpy="0 0 0"/>
+</joint> 
+
+
+
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.00647051871964233 -0.000365151823192633 -0.130589100082124"
+        rpy="0 0 0" />
+         <mass
+        value="0.164729002881636" />
+      <inertia
+        ixx="6.26281671270997E-05"
+        ixy="8.65538923281156E-07"
+        ixz="4.53485280575678E-08"
+        iyy="9.08258366556841E-05"
+        iyz="-5.53309881732439E-10"
+        izz="0.000142682581105393" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot1/meshes/base_link.STL" scale="1 1 1" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 0.32" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot1/meshes/base_link.STL" scale="1 1 1" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="fl">
+    <inertial>
+      <origin
+        xyz="1.10456654016655E-05 -0.0520940369621504 -1.1086141408323E-05"
+        rpy="0 0 0" />
+        <mass
+        value="0.164729002881636" />
+      <inertia
+        ixx="6.26281671270997E-05"
+        ixy="8.65538923281156E-07"
+        ixz="4.53485280575678E-08"
+        iyy="9.08258366556841E-05"
+        iyz="-5.53309881732439E-10"
+        izz="0.000142682581105393" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot1/meshes/fl.STL" scale="1 1 1" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot1/meshes/fl.STL" scale="1 1 1" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="flj"
+    type="continuous">
+    <origin
+      xyz="0.30772 0.27156 -0.13995"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="fl" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="8"
+      velocity="8" />
+  </joint>
+  <link
+    name="fr">
+    <inertial>
+      <origin
+        xyz="-1.07524113364121E-05 0.0520940369696714 1.13248931264964E-05"
+        rpy="0 0 0" />
+          <mass
+        value="0.164729002881636" />
+      <inertia
+        ixx="6.26281671270997E-05"
+        ixy="8.65538923281156E-07"
+        ixz="4.53485280575678E-08"
+        iyy="9.08258366556841E-05"
+        iyz="-5.53309881732439E-10"
+        izz="0.000142682581105393" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot1/meshes/fr.STL" scale="1 1 1" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot1/meshes/fr.STL" scale="1 1 1" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="frj"
+    type="continuous">
+    <origin
+      xyz="0.30772 -0.27244 -0.13995"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="fr" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="8"
+      velocity="8" />
+  </joint>
+  <link
+    name="bl">
+    <inertial>
+      <origin
+        xyz="1.0317215949518E-05 -0.0520940404215675 1.17150107035169E-05"
+        rpy="0 0 0" />
+          <mass
+        value="0.164729002881636" />
+      <inertia
+        ixx="6.26281671270997E-05"
+        ixy="8.65538923281156E-07"
+        ixz="4.53485280575678E-08"
+        iyy="9.08258366556841E-05"
+        iyz="-5.53309881732439E-10"
+        izz="0.000142682581105393" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot1/meshes/bl.STL" scale="1 1 1"  />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot1/meshes/bl.STL" scale="1 1 1" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="blj"
+    type="continuous">
+    <origin
+      xyz="-0.29482 0.27156 -0.13995"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="bl" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="8"
+      velocity="8" />
+  </joint>
+  <link
+    name="br">
+    <inertial>
+      <origin
+        xyz="1.10456654047186E-05 0.0520940369621483 1.10390458581966E-05"
+        rpy="0 0 0" />
+     <mass
+        value="0.164729002881636" />
+      <inertia
+        ixx="6.26281671270997E-05"
+        ixy="8.65538923281156E-07"
+        ixz="4.53485280575678E-08"
+        iyy="9.08258366556841E-05"
+        iyz="-5.53309881732439E-10"
+        izz="0.000142682581105393" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot1/meshes/br.STL" scale="1 1 1" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot1/meshes/br.STL" scale="1 1 1" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="brj"
+    type="continuous">
+    <origin
+      xyz="-0.29482 -0.27244 -0.13995"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="br" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="8"
+      velocity="8" />
+  </joint>
+  <link
+    name="li">
+    <inertial>
+      <origin
+        xyz="-0.000648399388502252 4.08940147986203E-06 -0.0402872608462286"
+        rpy="0 0 0" />
+     <mass
+        value="0.164729002881636" />
+      <inertia
+        ixx="6.26281671270997E-05"
+        ixy="8.65538923281156E-07"
+        ixz="4.53485280575678E-08"
+        iyy="9.08258366556841E-05"
+        iyz="-5.53309881732439E-10"
+        izz="0.000142682581105393" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot1/meshes/li.STL" scale="1 1 1"  />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 0.32" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot1/meshes/li.STL" scale="1 1 1" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lij"
+    type="fixed">
+    <origin
+      xyz="0.30901 3.0166E-05 0.068"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="li" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="i">
+    <inertial>
+      <origin
+        xyz="-0.0105665741259611 -5.01582753105467E-05 -0.000421835337535759"
+        rpy="0 0 0" />
+          <mass
+        value="0.164729002881636" />
+      <inertia
+        ixx="6.26281671270997E-05"
+        ixy="8.65538923281156E-07"
+        ixz="4.53485280575678E-08"
+        iyy="9.08258366556841E-05"
+        iyz="-5.53309881732439E-10"
+        izz="0.000142682581105393" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot1/meshes/i.STL" scale="1 1 1" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 0.32" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot1/meshes/i.STL " scale="1 1 1" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ij"
+    type="fixed">
+    <origin
+      xyz="0.41444 -0.0016459 -0.034503"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="i" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+  <gazebo reference="fl">
+    <mu1>0.1</mu1>
+    <mu2>0.1</mu2>
+    <kp>500000.0</kp>
+    <kd>10.0</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>1</maxVel>
+    <fdir1>9 0 0</fdir1>
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
+
+  <gazebo reference="fr">
+    <mu1>0.1</mu1>
+    <mu2>0.1</mu2>
+    <kp>500000.0</kp>
+    <kd>10.0</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>1</maxVel>
+    <fdir1>9 0 0</fdir1>
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
+
+  <gazebo reference="bl">
+    <mu1>0.1</mu1>
+    <mu2>0.1</mu2>
+     <kp>500000.0</kp>
+    <kd>10.0</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>1</maxVel>
+ <fdir1>9 0 0</fdir1>
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
+
+  <gazebo reference="br">
+    <mu1>0.1</mu1>
+    <mu2>0.1</mu2>
+    <kp>5000000.0</kp>
+    <kd>10.0</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>1</maxVel>
+ <fdir1>9 0 0</fdir1>
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
+
+<gazebo reference="base_link">
+    <mu1>0.1</mu1>
+    <mu2>0.1</mu2>
+    <kp>5000000.0</kp>
+    <kd>10.0</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>1</maxVel>
+ <fdir1>9 0 0</fdir1>
+    <material>Gazebo/Orange</material>
+
+  </gazebo>
+
+<gazebo reference="i">
+    <mu1>0.1</mu1>
+    <mu2>0.1</mu2>
+    <kp>5000000.0</kp>
+    <kd>10.0</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>1</maxVel>
+ <fdir1>9 0 0</fdir1>
+    <material>Gazebo/Blue</material>
+  </gazebo>
+
+<gazebo reference="li">
+    <mu1>0.1</mu1>
+    <mu2>0.1</mu2>
+    <kp>5000000.0</kp>
+    <kd>10.0</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>1</maxVel>
+ <fdir1>9 0 0</fdir1>
+    <material>Gazebo/Red</material>
+  </gazebo>
+
+
+
+
+<gazebo>
+    <plugin name="object_controller" filename="libgazebo_ros_planar_move.so">
+      <commandTopic>cmd_vel</commandTopic>
+      <odometryTopic>odom</odometryTopic>
+      <odometryFrame>odom</odometryFrame>
+      <odometryRate>20.0</odometryRate>
+      <robotBaseFrame>base_footprint</robotBaseFrame>
+    </plugin>
+  </gazebo>
+
+
+</robot>

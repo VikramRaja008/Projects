@@ -1,0 +1,31 @@
+<launch>
+  <arg name="map_file" default="$(find iiplab)/map/map.yaml"/>
+<arg name="open_rviz" default="true"/>
+  <arg name="move_forward_only" default="false"/>
+<!--   urdf file location  -->
+    <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find iiplab)/urdf/Mec.urdf'"/>
+
+
+
+<!--   office world -->
+	<include file="$(find iiplab)/launch/office_world.launch" />
+
+<!-- Argument for spawning location -->
+  <arg name="x" default="-4.0"/>
+  <arg name="y" default="-0.5"/>
+  <arg name="z" default="0.0"/>
+		
+<!-- Spawn the robot model -->
+	<node name="mybot_spawn" pkg="gazebo_ros" type="spawn_model" output="screen" 
+	    args="-urdf -param robot_description -model ebot -x $(arg x) -y $(arg y) -z $(arg z)" />
+
+  <!-- move_base -->
+  <include file="$(find iiplab)/launch/nav.launch">
+    <arg name="move_forward_only" value="$(arg move_forward_only)"/>
+  </include>
+
+	  
+       
+</launch>
+
+

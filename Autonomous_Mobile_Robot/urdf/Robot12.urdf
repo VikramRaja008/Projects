@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Robot12">
+
+
+ <link name="base_footprint">
+    
+    <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+            <box size="0.001 0.001 0.001" />
+        </geometry>
+    </visual>
+  </link>
+
+  <gazebo reference="base_footprint">
+    <turnGravityOff>false</turnGravityOff>
+  </gazebo>
+
+
+<joint name="base_footprint_joint" type="fixed">
+    <parent link="base_footprint" />
+    <child link="base_link" />
+    <origin xyz="0 0 0.12" rpy="0 0 0"/>
+</joint>
+
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.00034657 -0.0011128 -0.039351"
+        rpy="0 0 0" />
+      <mass
+        value="0.5126" />
+      <inertia
+        ixx="0.00032578"
+        ixy="2.8169E-05"
+        ixz="4.0693E-05"
+        iyy="0.0021817"
+        iyz="-6.3229E-07"
+        izz="0.0023755" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot12/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot12/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="fl">
+    <inertial>
+      <origin
+        xyz="-0.00023333 -0.015475 -7.6226E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.051851" />
+      <inertia
+        ixx="5.7121E-06"
+        ixy="4.0993E-08"
+        ixz="-1.6217E-10"
+        iyy="8.4187E-06"
+        iyz="8.1735E-11"
+        izz="5.7107E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot12/meshes/fl.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot12/meshes/fl.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="flj"
+    type="continuous">
+    <origin
+      xyz="0.092 0.079055 -0.04392"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="fl" />
+    <axis
+      xyz="0.015269 0.99988 0" />
+    <limit
+      effort="10"
+      velocity="10" />
+  </joint>
+  <link
+    name="fr">
+    <inertial>
+      <origin
+        xyz="0.000239143192053981 0.01547469935517 1.23611449448502E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.0518511646211301" />
+      <inertia
+        ixx="5.71201493238639E-06"
+        ixy="4.16758370527774E-08"
+        ixz="2.70550422028983E-10"
+        iyy="8.4186856112254E-06"
+        iyz="1.30654795395309E-10"
+        izz="5.71080351135864E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot12/meshes/fr.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot12/meshes/fr.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="frj"
+    type="continuous">
+    <origin
+      xyz="0.089508 -0.084126 -0.04392"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="fr" />
+    <axis
+      xyz="0.015269 0.99988 0" />
+    <limit
+      effort="10"
+      velocity="10" />
+  </joint>
+  <link
+    name="bl">
+    <inertial>
+      <origin
+        xyz="-0.000238759326050997 -0.0154747054083572 -1.88422447089387E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.0518511647826632" />
+      <inertia
+        ixx="5.71180163461696E-06"
+        ixy="4.16248201917771E-08"
+        ixz="3.88066787687511E-10"
+        iyy="8.41868739967291E-06"
+        iyz="2.20555388072193E-10"
+        izz="5.71101543643598E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot12/meshes/bl.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot12/meshes/bl.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="blj"
+    type="continuous">
+    <origin
+      xyz="-0.088702 0.081815 -0.040116"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="bl" />
+    <axis
+      xyz="0.015269 0.99988 0" />
+     <limit
+      effort="10"
+      velocity="10" />
+  </joint>
+  <link
+    name="br">
+    <inertial>
+      <origin
+        xyz="0.000235227408515226 0.0154747594775316 -2.88574022422328E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.0518511643588347" />
+      <inertia
+        ixx="5.71144065525016E-06"
+        ixy="4.12169510560345E-08"
+        ixz="2.7334493082614E-10"
+        iyy="8.41869995678316E-06"
+        iyz="-3.3599005930897E-10"
+        izz="5.71136385377247E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot12/meshes/br.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot12/meshes/br.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="brj"
+    type="continuous">
+    <origin
+      xyz="-0.091194 -0.081366 -0.040116"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="br" />
+    <axis
+      xyz="0.015269 0.99988 0" />
+     <limit
+      effort="10"
+      velocity="10" />
+  </joint>
+  <link
+    name="li">
+    <inertial>
+      <origin
+        xyz="-0.000448905448132586 1.29259293038531E-06 -0.0120795763942918"
+        rpy="0 0 0" />
+      <mass
+        value="0.00393575360283928" />
+      <inertia
+        ixx="8.83872230042717E-08"
+        ixy="9.45437470818513E-12"
+        ixz="1.80664299340198E-09"
+        iyy="8.96818485591516E-08"
+        iyz="-1.37786132580095E-12"
+        izz="1.18797389352238E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot12/meshes/li.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 0.32" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot12/meshes/li.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lij"
+    type="fixed">
+    <origin
+      xyz="0.093124 0 0.019047"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="li" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="i">
+    <inertial>
+      <origin
+        xyz="-0.0032756728123704 -5.16690717988766E-10 7.05396653942758E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.00122506217319611" />
+      <inertia
+        ixx="7.07273545667858E-08"
+        ixy="2.36214786027308E-15"
+        ixz="-9.52012586493939E-12"
+        iyy="9.81049029915477E-09"
+        iyz="1.04160535877551E-13"
+        izz="7.02854752567609E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot12/meshes/i.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.776470588235294 0.756862745098039 0.737254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot12/meshes/i.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ij"
+    type="fixed">
+    <origin
+      xyz="0.12153 -0.0030326 -0.013093"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="i" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+
+ <gazebo reference="fl">
+    <mu1>0.1</mu1>
+    <mu2>0.1</mu2>
+    <kp>500000.0</kp>
+    <kd>10.0</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>1</maxVel>
+    <fdir1>9 0 0</fdir1>
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
+
+  <gazebo reference="fr">
+    <mu1>0.1</mu1>
+    <mu2>0.1</mu2>
+    <kp>500000.0</kp>
+    <kd>10.0</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>1</maxVel>
+    <fdir1>9 0 0</fdir1>
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
+
+  <gazebo reference="bl">
+  
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
+
+  <gazebo reference="br">
+   
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
+
+<gazebo reference="base_link">
+    
+    <material>Gazebo/Orange</material>
+
+  </gazebo>
+
+<gazebo reference="i">
+    
+    <material>Gazebo/Blue</material>
+  </gazebo>
+
+<gazebo reference="li">
+
+ <fdir1>9 0 0</fdir1>
+    <material>Gazebo/Red</material>
+  </gazebo>
+
+
+
+
+    <gazebo>
+      <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
+			
+		    <updateRate>50.0</updateRate>
+		    <leftFrontJoint>flj</leftFrontJoint>
+		    <rightFrontJoint>frj</rightFrontJoint>
+		    <leftRearJoint>blj</leftRearJoint>
+		    <rightRearJoint>brj</rightRearJoint>
+
+		    <wheelSeparation>0.487</wheelSeparation>
+		    <wheelDiameter>0.1</wheelDiameter>
+		    <robotBaseFrame>base_footprint</robotBaseFrame>
+		    <torque>50</torque>
+		    <commandTopic>cmd_vel</commandTopic>
+		    <odometryTopic>odom</odometryTopic>
+		    <odometryFrame>odom</odometryFrame>
+		    <broadcastTF>true</broadcastTF>
+      </plugin>
+    </gazebo>
+
+
+ <gazebo reference="li">
+    <material>Gazebo/FlatBlack</material>
+    <sensor type="ray" name="lds_lfcd_sensor">
+      <pose>0 0 0 0 0 0</pose>
+      <visualize>false</visualize>
+      <update_rate>5</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>360</samples>
+            <resolution>1</resolution>
+            <min_angle>0.0</min_angle>
+            <max_angle>6.28319</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.120</min>
+          <max>3.5</max>
+          <resolution>0.015</resolution>
+        </range>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.01</stddev>
+        </noise>
+      </ray>
+      <plugin name="gazebo_ros_lds_lfcd_controller" filename="libgazebo_ros_laser.so">
+        <topicName>scan</topicName>
+        <frameName>li</frameName>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+<gazebo>
+    <plugin name="object_controller" filename="libgazebo_ros_planar_move.so">
+      <commandTopic>cmd_vel</commandTopic>
+      <odometryTopic>odom</odometryTopic>
+      <odometryFrame>odom</odometryFrame>
+      <odometryRate>20.0</odometryRate>
+      <robotBaseFrame>base_footprint</robotBaseFrame>
+    </plugin>
+  </gazebo>
+
+
+ <gazebo reference="i">
+    <sensor type="depth" name="realsense_R200">
+      <always_on>true</always_on>
+      <visualize>true</visualize>
+      <camera>
+          <horizontal_fov>1.3439</horizontal_fov>
+          <image>
+              <width>1920</width>
+              <height>1080</height>
+              <format>R8G8B8</format>
+          </image>
+          <depth_camera></depth_camera>
+          <clip>
+              <near>0.03</near>
+              <far>100</far>
+          </clip>
+      </camera>
+      <plugin name="camera_controller" filename="libgazebo_ros_openni_kinect.so">
+        <baseline>0.2</baseline>
+        <alwaysOn>true</alwaysOn>
+        <updateRate>30.0</updateRate>
+        <cameraName>camera</cameraName>
+        <frameName>i</frameName>
+        <imageTopicName>rgb/image_raw</imageTopicName>
+        <depthImageTopicName>depth/image_raw</depthImageTopicName>
+        <pointCloudTopicName>depth/points</pointCloudTopicName>
+        <cameraInfoTopicName>rgb/camera_info</cameraInfoTopicName>
+        <depthImageCameraInfoTopicName>depth/camera_info</depthImageCameraInfoTopicName>
+        <pointCloudCutoff>0.4</pointCloudCutoff>
+            <hackBaseline>0.07</hackBaseline>
+            <distortionK1>0.0</distortionK1>
+            <distortionK2>0.0</distortionK2>
+            <distortionK3>0.0</distortionK3>
+            <distortionT1>0.0</distortionT1>
+            <distortionT2>0.0</distortionT2>
+        <CxPrime>0.0</CxPrime>
+        <Cx>0.0</Cx>
+        <Cy>0.0</Cy>
+        <focalLength>0</focalLength>
+        <hackBaseline>0</hackBaseline>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+</robot>

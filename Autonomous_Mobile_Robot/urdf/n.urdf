@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="n">
+
+<link name="base_footprint">
+    
+    <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+            <box size="0.001 0.001 0.001" />
+        </geometry>
+    </visual>
+  </link>
+
+  <gazebo reference="base_footprint">
+    <turnGravityOff>false</turnGravityOff>
+  </gazebo>
+
+
+<joint name="base_footprint_joint" type="fixed">
+    <parent link="base_footprint" />
+    <child link="base_link" />
+    <origin xyz="0 0 0.15" rpy="0 0 0"/>
+</joint> 
+
+
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-5.70335553229384E-08 0 -0.0104935829042825"
+        rpy="0 0 0" />
+      <mass
+        value="0.291996112689346" />
+      <inertia
+        ixx="0.000254300038430057"
+        ixy="-6.26804380968182E-20"
+        ixz="-4.08000165940976E-12"
+        iyy="0.000520360495960744"
+        iyz="-1.25789625466017E-20"
+        izz="0.000752720645346264" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://iiplab/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://iiplab/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="l_Link">
+    <inertial>
+      <origin
+        xyz="0 -0.0052 1.38777878078145E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0392699081698724" />
+      <inertia
+        ixx="1.21950081827661E-05"
+        ixy="1.62789144550436E-21"
+        ixz="2.94395590749513E-22"
+        iyy="2.35815798560084E-05"
+        iyz="1.51222718675841E-22"
+        izz="1.21950081827661E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://iiplab/meshes/l_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://iiplab/meshes/l_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ljoint"
+    type="continuous">
+    <origin
+      xyz="0 0.06 -0.0107385754247457"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l_Link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="2"
+      velocity="2" />
+  </joint>
+  <link
+    name="r_Link">
+    <inertial>
+      <origin
+        xyz="0.0051993019972844 8.51982454894151E-05 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0392699081698724" />
+      <inertia
+        ixx="2.35785231927301E-05"
+        ixy="1.86535713227954E-07"
+        ixz="-8.02207821206689E-24"
+        iyy="1.21980648460444E-05"
+        iyz="8.03010482811756E-22"
+        izz="1.21950081827661E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://iiplab/meshes/r_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://iiplab/meshes/r_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rjoint"
+    type="continuous">
+    <origin
+      xyz="0 -0.06 -0.0107385754247457"
+      rpy="0 0 1.55441131568254" />
+    <parent
+      link="base_link" />
+    <child
+      link="r_Link" />
+    <axis
+      xyz="0.999865768708538 0.0163842779787276 0" />
+    <limit
+      effort="2"
+      velocity="2" />
+  </joint>
+  <link
+    name="sense">
+    <inertial>
+      <origin
+        xyz="0.000345412463142514 0.00023279027761031 -0.0217463220907179"
+        rpy="0 0 0" />
+      <mass
+        value="0.029229722273242" />
+      <inertia
+        ixx="4.99374006642867E-06"
+        ixy="-8.14468679690465E-10"
+        ixz="4.5470529966785E-08"
+        iyy="4.92453447666973E-06"
+        iyz="3.0644804179198E-08"
+        izz="5.00463651434428E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://iiplab/meshes/sense.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://iiplab/meshes/sense.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="sj"
+    type="fixed">
+    <origin
+      xyz="0.040742 0.00050226 0.035"
+      rpy="0 0 -0.016385" />
+    <parent
+      link="base_link" />
+    <child
+      link="sense" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="castor_Link">
+    <inertial>
+      <origin
+        xyz="0 0 0.0109583333333333"
+        rpy="0 0 0" />
+      <mass
+        value="0.00271433605270158" />
+      <inertia
+        ixx="1.56552159272952E-07"
+        ixy="2.06795153138257E-24"
+        ixz="3.60236627318405E-23"
+        iyy="1.56552159272952E-07"
+        iyz="-1.35750140169932E-23"
+        izz="4.72294473170075E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://iiplab/meshes/castor_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://iiplab/meshes/castor_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="castor_joint"
+    type="fixed">
+    <origin
+      xyz="0.040742 0.00050226 -0.044"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="castor_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      effort="2"
+      velocity="2" />
+  </joint>
+
+<!--wheel plugins and sensor plugins-->
+
+<gazebo reference="sense">
+    <material>Gazebo/Blue</material>
+    <turnGravityOff>false</turnGravityOff>
+    <sensor type="ray" name="head_hokuyo_sensor">
+      <pose>4 0 0 0 0 0</pose>
+      <visualize>true</visualize>
+      <update_rate>40</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>720</samples>
+            <resolution>1</resolution>
+            <min_angle>-1.570796</min_angle>
+            <max_angle>1.570796</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.10</min>
+          <max>10.0</max>
+          <resolution>0.001</resolution>
+        </range>
+      </ray>
+      <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_laser.so">
+        <topicName>/scan</topicName>
+        <frameName>sense</frameName>
+      </plugin>
+    </sensor>
+</gazebo>
+
+
+<!-- Differential drive controller  -->
+<gazebo>
+    <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+
+       <rosDebugLevel>Debug</rosDebugLevel>
+      <publishWheelTF>false</publishWheelTF>
+      <robotNamespace>/</robotNamespace>
+      <publishTf>1</publishTf>
+      <publishWheelJointState>false</publishWheelJointState>
+      <alwaysOn>true</alwaysOn>
+      <updateRate>30</updateRate>
+      <leftJoint>ljoint</leftJoint>
+      <rightJoint>rjoint</rightJoint>
+      <wheelSeparation>0.35</wheelSeparation>
+      <wheelDiameter>0.15</wheelDiameter>
+      <broadcastTF>1</broadcastTF>
+      <wheelTorque>10</wheelTorque>
+      <wheelAcceleration>10</wheelAcceleration>
+      <commandTopic>cmd_vel</commandTopic>
+      <odometryFrame>odom</odometryFrame> 
+      <odometryTopic>odom</odometryTopic> 
+      <odometrySource>1</odometrySource>
+      <publishOdomTF>true</publishOdomTF>
+      <robotBaseFrame>base_footprint</robotBaseFrame>
+      
+    </plugin>
+</gazebo> 
+
+
+</robot>

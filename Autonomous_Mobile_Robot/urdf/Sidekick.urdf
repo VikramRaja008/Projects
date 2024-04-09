@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Sidekick">
+ <!-- CHASIS-->
+ <link name="base_footprint">
+    
+    <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+            <box size="0.001 0.001 0.001" />
+        </geometry>
+    </visual>
+  </link>
+
+  <gazebo reference="base_footprint">
+    <turnGravityOff>false</turnGravityOff>
+  </gazebo>
+
+
+<joint name="base_footprint_joint" type="fixed">
+    <parent link="base_footprint" />
+    <child link="base_link" />
+    <origin xyz="0 0 0.04" rpy="0 0 0"/>
+</joint> 
+
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.00265800772302817 6.18347628512997E-05 -0.0213674511926631"
+        rpy="0 5 0" />
+      <mass
+        value="0.164729002881636" />
+      <inertia
+        ixx="6.26281671270997E-05"
+        ixy="8.65538923281156E-07"
+        ixz="4.53485280575678E-08"
+        iyy="9.08258366556841E-05"
+        iyz="-5.53309881732439E-10"
+        izz="0.000142682581105393" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://iiplab/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.101960784313725 0.101960784313725 0.101960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://iiplab/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="linkleft">
+    <inertial>
+      <origin
+        xyz="1.07225339718298E-12 0.00134865102675585 2.66814348393041E-13"
+        rpy="0 0 0" />
+      <mass
+        value="0.0123253895510708" />
+      <inertia
+        ixx="2.61790926238722E-06"
+        ixy="5.91025383474373E-17"
+        ixz="-2.53921312238284E-17"
+        iyy="5.05897911088528E-06"
+        iyz="3.2744327105692E-16"
+        izz="2.6179092654738E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://iiplab/meshes/linkleft.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://iiplab/meshes/linkleft.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leftjoint"
+    type="continuous">
+    <origin
+      xyz="-0.00031654 0.048788 -0.0225"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="linkleft" />
+    <axis
+      xyz="0.0051241 0.99999 0" />
+    <limit
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="linkright">
+    <inertial>
+      <origin
+        xyz="1.68573488501522E-12 -0.00134865102793029 -2.99218982924288E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.0123253895449639" />
+      <inertia
+        ixx="2.61790926649234E-06"
+        ixy="-4.35536860327757E-16"
+        ixz="-1.22982047202166E-15"
+        iyy="5.0589791120954E-06"
+        iyz="4.94787542200678E-16"
+        izz="2.61790926265243E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://iiplab/meshes/linkright.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://iiplab/meshes/linkright.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jointright"
+    type="continuous">
+    <origin
+      xyz="-0.00081654 -0.048788 -0.0225"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="linkright" />
+    <axis
+      xyz="0.0051241 0.99999 0" />
+    <limit
+      effort="1"
+      velocity="1" />
+  </joint>
+
+
+ <gazebo reference="base_link">
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+
+  <gazebo reference="linkleft">
+    <mu1>0.1</mu1>
+    <mu2>0.1</mu2>
+    <kp>500000.0</kp>
+    <kd>10.0</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>0.1</maxVel>
+    <fdir1>1 0 0</fdir1>
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
+
+  <gazebo reference="linkright">
+    <mu1>0.1</mu1>
+    <mu2>0.1</mu2>
+    <kp>500000.0</kp>
+    <kd>10.0</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>0.1</maxVel>
+    <fdir1>1 0 0</fdir1>
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
+<joint name="hokuyo_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="hokuyo_link" />
+    <origin xyz="0 0 0.1" />
+</joint>
+
+<link name="hokuyo_link" >
+    
+    <visual>
+        <origin xyz="0 0 0" rpy="0 1 0" />
+        <geometry>
+            <box size="0.05 0.05 0.05"/>
+        </geometry>
+      <material name="Blue" />
+    </visual>
+
+</link>
+
+
+<gazebo reference="hokuyo_link">
+    <material>Gazebo/Blue</material>
+    <turnGravityOff>false</turnGravityOff>
+    <sensor type="ray" name="head_hokuyo_sensor">
+      <pose>2 2 2 2 2 2</pose>
+      <visualize>true</visualize>
+      <update_rate>40</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>720</samples>
+            <resolution>1</resolution>
+            <min_angle>-1.570796</min_angle>
+            <max_angle>1.570796</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.10</min>
+          <max>10.0</max>
+          <resolution>0.001</resolution>
+        </range>
+      </ray>
+      <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_laser.so">
+        <topicName>/scan</topicName>
+        <frameName>hokuyo_link</frameName>
+      </plugin>
+    </sensor>
+</gazebo>
+
+  <!-- Differential drive controller  -->
+<gazebo>
+    <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+
+      <rosDebugLevel>Debug</rosDebugLevel>
+      <publishWheelTF>false</publishWheelTF>
+      <robotNamespace>/</robotNamespace>
+      <publishTf>1</publishTf>
+      <publishWheelJointState>false</publishWheelJointState>
+      <alwaysOn>true</alwaysOn>
+      <updateRate>100.0</updateRate>
+      <leftJoint>leftjoint</leftJoint>
+      <rightJoint>jointright</rightJoint>
+      <wheelSeparation>0.2</wheelSeparation>
+      <wheelDiameter>0.2</wheelDiameter>
+      <broadcastTF>1</broadcastTF>
+      <wheelTorque>30</wheelTorque>
+      <wheelAcceleration>1.8</wheelAcceleration>
+      <commandTopic>cmd_vel</commandTopic>
+      <odometryFrame>odom</odometryFrame> 
+      <odometryTopic>odom</odometryTopic> 
+      <odometrySource>1</odometrySource>
+      <publishOdomTF>true</publishOdomTF>
+      <robotBaseFrame>base_footprint</robotBaseFrame>
+      
+    </plugin>
+</gazebo> 
+
+</robot>

@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Mec">
+
+
+
+
+ <link name="base_footprint">
+    
+    <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+            <box size="0.001 0.001 0.001" />
+        </geometry>
+    </visual>
+  </link>
+
+  <gazebo reference="base_footprint">
+    <turnGravityOff>false</turnGravityOff>
+  </gazebo>
+
+
+<joint name="base_footprint_joint" type="fixed">
+    <parent link="base_footprint" />
+    <child link="base_link" />
+    <origin xyz="0 0 0.12" rpy="0 0 0"/>
+</joint> 
+
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0039819 -8.0102E-10 -0.018441"
+        rpy="0 0 0" />
+      <mass
+        value="0.29363" />
+      <inertia
+        ixx="0.00024426"
+        ixy="-2.7183E-07"
+        ixz="-4.0581E-20"
+        iyy="0.00057113"
+        iyz="-4.7529E-16"
+        izz="0.00078455" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mec/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mec/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="bl">
+    <inertial>
+      <origin
+        xyz="2.3722E-11 -0.017901 3.4216E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.17845" />
+      <inertia
+        ixx="9.3297E-05"
+        ixy="7.7333E-14"
+        ixz="1.8224E-14"
+        iyy="0.00014723"
+        iyz="1.4654E-09"
+        izz="9.3297E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mec/meshes/bl.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mec/meshes/bl.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="blj"
+    type="continuous">
+    <origin
+      xyz="-0.088652 0.1257 -0.0355"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="bl" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="2"
+      velocity="2" />
+  </joint>
+  <link
+    name="br">
+    <inertial>
+      <origin
+        xyz="-2.3722E-11 0.017901 3.4216E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.17845" />
+      <inertia
+        ixx="9.3297E-05"
+        ixy="7.7333E-14"
+        ixz="-1.8224E-14"
+        iyy="0.00014723"
+        iyz="-1.4654E-09"
+        izz="9.3297E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mec/meshes/br.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mec/meshes/br.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="brj"
+    type="continuous">
+    <origin
+      xyz="-0.088652 -0.1257 -0.0355"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="br" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="2"
+      velocity="2" />
+  </joint>
+  <link
+    name="fl">
+    <inertial>
+      <origin
+        xyz="2.3722E-11 -0.017901 3.4216E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.17845" />
+      <inertia
+        ixx="9.3297E-05"
+        ixy="7.7333E-14"
+        ixz="1.8224E-14"
+        iyy="0.00014723"
+        iyz="1.4654E-09"
+        izz="9.3297E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mec/meshes/fl.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mec/meshes/fl.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="flj"
+    type="continuous">
+    <origin
+      xyz="0.076348 0.1257 -0.0355"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="fl" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      effort="2"
+      velocity="2" />
+  </joint>
+  <link
+    name="fr">
+    <inertial>
+      <origin
+        xyz="-2.3722E-11 0.017901 3.4216E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.17845" />
+      <inertia
+        ixx="9.3297E-05"
+        ixy="7.7333E-14"
+        ixz="-1.8224E-14"
+        iyy="0.00014723"
+        iyz="-1.4654E-09"
+        izz="9.3297E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mec/meshes/fr.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mec/meshes/fr.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="frj"
+    type="continuous">
+    <origin
+      xyz="0.076348 -0.1257 -0.0355"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="fr" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      effort="2"
+      velocity="2" />
+  </joint>
+  <link
+    name="sl">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mec/meshes/sl.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Mec/meshes/sl.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="slj"
+    type="fixed">
+    <origin
+      xyz="0.09484 0.0030609 0.035"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="sl" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+
+    <gazebo>
+      <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
+			<!--<robotNamespace>/summit_xl</robotNamespace>-->
+		    <updateRate>50.0</updateRate>
+		    <leftFrontJoint>flj</leftFrontJoint>
+		    <rightFrontJoint>frj</rightFrontJoint>
+		    <leftRearJoint>blj</leftRearJoint>
+		    <rightRearJoint>brj</rightRearJoint>
+		    <!-- wheelSeparation>0.566</wheelSeparation --> <!-- real parameter value -->
+		    <wheelSeparation>0.287</wheelSeparation> <!-- works a bit better in Gazebo -->
+		    <wheelDiameter>0.066</wheelDiameter>
+		    <robotBaseFrame>base_footprint</robotBaseFrame>
+		    <torque>50</torque>
+		    <commandTopic>cmd_vel</commandTopic>
+		    <odometryTopic>odom</odometryTopic>
+		    <odometryFrame>odom</odometryFrame>
+		    <broadcastTF>true</broadcastTF>
+      </plugin>
+    </gazebo>
+
+
+ <gazebo reference="sl">
+    <material>Gazebo/FlatBlack</material>
+    <sensor type="ray" name="lds_lfcd_sensor">
+      <pose>0 0 0 0 0 0</pose>
+      <visualize>True</visualize>
+      <update_rate>5</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>360</samples>
+            <resolution>1</resolution>
+            <min_angle>0.0</min_angle>
+            <max_angle>6.28319</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.120</min>
+          <max>3.5</max>
+          <resolution>0.015</resolution>
+        </range>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.01</stddev>
+        </noise>
+      </ray>
+      <plugin name="gazebo_ros_lds_lfcd_controller" filename="libgazebo_ros_laser.so">
+        <topicName>scan</topicName>
+        <frameName>sl</frameName>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+<gazebo>
+    <plugin name="object_controller" filename="libgazebo_ros_planar_move.so">
+      <commandTopic>cmd_vel</commandTopic>
+      <odometryTopic>odom</odometryTopic>
+      <odometryFrame>odom</odometryFrame>
+      <odometryRate>20.0</odometryRate>
+      <robotBaseFrame>base_footprint</robotBaseFrame>
+    </plugin>
+  </gazebo>
+
+
+
+
+</robot>
