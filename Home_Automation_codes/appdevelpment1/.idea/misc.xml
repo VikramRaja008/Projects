@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/VIKI_COMP/AndroidStudioProjects/appdevelpment1/app/src/debug/res/drawable/ic_launcher_foreground.xml" value="0.1" />
+        <entry key="..\:/Users/VIKI_COMP/AndroidStudioProjects/appdevelpment1/app/src/main/res/drawable/avatar_1.xml" value="0.1" />
+        <entry key="..\:/Users/VIKI_COMP/AndroidStudioProjects/appdevelpment1/app/src/main/res/drawable/avatar_16.xml" value="0.1" />
+        <entry key="..\:/Users/VIKI_COMP/AndroidStudioProjects/appdevelpment1/app/src/main/res/drawable/avatar_2.xml" value="0.1" />
+        <entry key="..\:/Users/VIKI_COMP/AndroidStudioProjects/appdevelpment1/app/src/main/res/drawable/ic_camera_black_24dp.xml" value="0.1" />
+        <entry key="..\:/Users/VIKI_COMP/AndroidStudioProjects/appdevelpment1/app/src/main/res/drawable/ic_gallery_black_24dp.xml" value="0.1" />
+        <entry key="..\:/Users/VIKI_COMP/AndroidStudioProjects/appdevelpment1/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1" />
+        <entry key="..\:/Users/VIKI_COMP/AndroidStudioProjects/appdevelpment1/app/src/main/res/drawable/ic_settings_black_24dp.xml" value="0.1" />
+        <entry key="..\:/Users/VIKI_COMP/AndroidStudioProjects/appdevelpment1/app/src/main/res/drawable/ic_side_bg.xml" value="0.153" />
+        <entry key="..\:/Users/VIKI_COMP/AndroidStudioProjects/appdevelpment1/app/src/main/res/drawable/ic_slideshow_black_24dp.xml" value="0.1" />
+        <entry key="..\:/Users/VIKI_COMP/AndroidStudioProjects/appdevelpment1/app/src/main/res/drawable/side_nav_bar.xml" value="0.1" />
+        <entry key="..\:/Users/VIKI_COMP/AndroidStudioProjects/appdevelpment1/app/src/main/res/layout-w1240dp/content_main.xml" value="0.264" />
+        <entry key="..\:/Users/VIKI_COMP/AndroidStudioProjects/appdevelpment1/app/src/main/res/layout-w600dp/content_main.xml" value="0.264" />
+        <entry key="..\:/Users/VIKI_COMP/AndroidStudioProjects/appdevelpment1/app/src/main/res/layout/activity_controlling.xml" value="0.12318840579710146" />
+        <entry key="..\:/Users/VIKI_COMP/AndroidStudioProjects/appdevelpment1/app/src/main/res/layout/activity_devices.xml" value="0.1" />
+        <entry key="..\:/Users/VIKI_COMP/AndroidStudioProjects/appdevelpment1/app/src/main/res/layout/activity_login.xml" value="0.176" />
+        <entry key="..\:/Users/VIKI_COMP/AndroidStudioProjects/appdevelpment1/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/VIKI_COMP/AndroidStudioProjects/appdevelpment1/app/src/main/res/layout/activity_main2.xml" value="0.21875" />
+        <entry key="..\:/Users/VIKI_COMP/AndroidStudioProjects/appdevelpment1/app/src/main/res/layout/activity_pairing_mode.xml" value="0.2" />
+        <entry key="..\:/Users/VIKI_COMP/AndroidStudioProjects/appdevelpment1/app/src/main/res/layout/activity_register.xml" value="0.264" />
+        <entry key="..\:/Users/VIKI_COMP/AndroidStudioProjects/appdevelpment1/app/src/main/res/layout/activity_select_device.xml" value="0.1515625" />
+        <entry key="..\:/Users/VIKI_COMP/AndroidStudioProjects/appdevelpment1/app/src/main/res/layout/activity_subuseradd.xml" value="0.264" />
+        <entry key="..\:/Users/VIKI_COMP/AndroidStudioProjects/appdevelpment1/app/src/main/res/layout/content_main.xml" value="0.2" />
+        <entry key="..\:/Users/VIKI_COMP/AndroidStudioProjects/appdevelpment1/app/src/main/res/layout/content_subuseradd.xml" value="0.12158054711246201" />
+        <entry key="..\:/Users/VIKI_COMP/AndroidStudioProjects/appdevelpment1/app/src/main/res/layout/device_info_layout.xml" value="0.153125" />
+        <entry key="..\:/Users/VIKI_COMP/AndroidStudioProjects/appdevelpment1/app/src/main/res/layout/fragment_first.xml" value="0.12158054711246201" />
+        <entry key="..\:/Users/VIKI_COMP/AndroidStudioProjects/appdevelpment1/app/src/main/res/layout/fragment_second.xml" value="0.12158054711246201" />
+        <entry key="..\:/Users/VIKI_COMP/AndroidStudioProjects/appdevelpment1/app/src/main/res/layout/list_item.xml" value="0.1640625" />
+        <entry key="..\:/Users/VIKI_COMP/AndroidStudioProjects/appdevelpment1/app/src/main/res/menu/bottom_navigation.xml" value="0.2" />
+        <entry key="..\:/Users/VIKI_COMP/AndroidStudioProjects/appdevelpment1/app/src/main/res/menu/navigation_drawer.xml" value="0.13697916666666668" />
+        <entry key="..\:/Users/VIKI_COMP/AndroidStudioProjects/appdevelpment1/app/src/main/res/menu/overflow.xml" value="0.13697916666666668" />
+        <entry key="..\:/Users/VIKI_COMP/Desktop/appdevelpment1/app/src/main/res/layout/activity_main.xml" value="0.25" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
